@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+
 body {
     margin: 0;
     width: 100vw;
@@ -8,6 +10,7 @@ body {
     justify-content: center;
     gap: 20px;
     background: white;
+    font-size: 16px;
 }
 
 #img-dog {
@@ -15,17 +18,21 @@ body {
 }
 
 .btn-generar {
-    color: #333;
+    background: white;
+    color: #ddd;
     padding: 10px 50px;
     border-radius: 20px;
     border: none;
+    background: rgb(70, 134, 255);
+    font-size: 1.2em;
+    font-family: "Roboto Mono", monospace;
 }
 
 .btn-generar:hover {
-    background: #ddd;
-    color: back;
+    background: linear-gradient(to top, rgb(7, 94, 255), rgb(114, 164, 255));
     cursor: pointer;
 }
+
 
 #div-img {
     width: 400px;
@@ -49,9 +56,13 @@ body {
     border-radius: 30px;
     backdrop-filter: blur(2px);
     font-size: 20px;
+    font-family: "Roboto Mono", monospace;
 }
 
+.shadow-sm {
+    box-shadow: 2px 2px 5px 0px rgb(0, 0, 0, 0.5);
+}
 
-.shadow {
-    box-shadow: 5px 5px 10px 0px rgb(0, 0, 0, 0.5);
+.shadow-md {
+    box-shadow: 2px 2px 10px 0px rgb(0, 0, 0, 0.5);
 }

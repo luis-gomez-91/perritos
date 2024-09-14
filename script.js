@@ -7,22 +7,42 @@ document.addEventListener("DOMContentLoaded", function(){
         return perritos.message
     }
 
-    const boton = document.querySelector(".btn-generar")
-    boton.addEventListener("click", async function() {
-        
+    const botonGenerar = document.querySelector(".btn-generar")
 
-        const contendorPerro = document.getElementById("div-img")
-        contendorPerro.style.background = "url("+await dogService()+")"
-        contendorPerro.style.backgroundPosition = "center"
-        contendorPerro.style.backgroundSize = "cover"
-
-        const audio = document.getElementById("miAudio")
-        audio.play()
-
+    botonGenerar.addEventListener('mouseover', () => {
+        botonGenerar.classList.add('shadow-md')
+        botonGenerar.classList.remove('shadow-sm')
     })
 
+    botonGenerar.addEventListener('mouseout', () => {
+        botonGenerar.classList.add('shadow-sm')
+        botonGenerar.classList.remove('shadow-md')
+    })
 
+    const dogContainer = document.getElementById("div-img")
 
+    botonGenerar.addEventListener("click", async function() {
+        dogContainer.style.background = "url("+await dogService()+")"
+        dogContainer.style.backgroundPosition = "center"
+        dogContainer.style.backgroundSize = "cover"
+        const audio = document.getElementById("miAudio")
+        audio.play()
+    })
 
+    const resizeDogContainer = () => {
+        const vw = window.innerWidth
+        const vh = window.innerHeight
+        let size = vh / 2
+        if (vh > vw) {
+            size = vw / 2
+        }
+        dogContainer.style.width = size + "px"
+        dogContainer.style.height = size + "px"
+    }
 
+    window.addEventListener('resize', () => {
+        resizeDogContainer()
+    })
+
+    resizeDogContainer()
 })
