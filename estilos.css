@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: white;
+}
+
+#img-dog {
+    width: 500px;
+}
+
+.btn-generar {
+    color: #333;
+    padding: 10px 50px;
+    border-radius: 20px;
+    border: none;
+}
+
+.btn-generar:hover {
+    background: #ddd;
+    color: back;
+    cursor: pointer;
+}
+
+#div-img {
+    width: 400px;
+    height:400px;
+    background: url("https://humanidades.com/wp-content/uploads/2017/02/perro-3-e1561679226953.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#guaw {
+    position: absolute;
+    top: 20px;
+    left: -10px;
+    background: rgb(0, 0, 0, 0.4);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    backdrop-filter: blur(2px);
+    font-size: 20px;
+}
+
+
+.shadow {
+    box-shadow: 5px 5px 10px 0px rgb(0, 0, 0, 0.5);
+}
